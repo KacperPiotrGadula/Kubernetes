@@ -26,3 +26,9 @@ No resources found in default namespace.
 4) Check kubernetes version
 
 kubectl vesrion
+
+5) Check information about pod
+
+kubectl describe pod <pod_name>
+
+State:          Running
