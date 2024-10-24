@@ -18,3 +18,7 @@ gcloud container clusters get-credentials <cluster_name> --zone <your_cluster_zo
 
 kubectl config current-context
 kubectl cluster-info
+
+4) Install plugin for kubectl > 1.25 version for auth with GCP from you local command line
+
+[LINK](https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke)
