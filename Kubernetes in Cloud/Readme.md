@@ -34,3 +34,7 @@ gcloud container clusters resize k8smaestro --node-pool default-pool --num-nodes
 gcloud container clusters resize k8smaestro --node-pool default-pool --num-nodes 3(set_up_3_workers_node_in_cluster) --zone <time_zone>
 
 - we need it, becouse when we have workers node in cluster and we not use clsuter in something project, we will pay for cluster. When we don't having working node in cluster, we don't pay anothink becouse cluster is it not used
+
+6) Understanding structure of folders in .kube
+    - folder -> config -> shows information similar to the command "kubectl config get-context"
+                       -> shows information similar to the command "kubectl config current-context"
