@@ -1,0 +1,13 @@
+apiVersion: v1 #okreslenie wersji api
+kind: Pod #typ zasobu do zbudowania
+metadata:
+  name: first-pod #nazwa poda ktora sluzy do zidentyfikowania go w clustrze
+  labels:
+    zone: prod #wskazuje na strefe lub srodowisko na jakim powinien dzialac pod
+    version: v1 #oznaczenie wersji poda
+spec:
+  containers:
+  - name: hello-ctr # wskazanie nazwy konteneru
+    image: dnaprawa/hello-kubernetes:1.0 #wskazanie nazwy obrazu na podstawie, ktorego bedzie zbudowany pod
+    ports:
+    - containerPort: 80 #Wskazanie portu na ktorym aplikacja bedzie dzialac w pod
