@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: kubernetes
+  labels:
+    app: k8s
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: k8s
+  template:
+    metadata:
+      labels:
+        app: k8s
+    spec:
+      containers:
+      - name: web
+        image: k8smaestro/web-app:1.0
+        ports:
+          - containerPort: 80
