@@ -7,6 +7,6 @@ metadata:
 spec:
   containers:
   - name: imperativ
-    image: k8smaestro/web-app:1.0
+    image: k8smaestro/web-app:2.0
     ports:
       - containerPort: 80
