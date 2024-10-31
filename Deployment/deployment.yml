@@ -16,4 +16,4 @@ spec:
     spec:
       containers:
       - name: deployment-k8s-containers
-        image: k8smaestro/web-app:2.0
+        image: k8smaestro/web-app:1.0
