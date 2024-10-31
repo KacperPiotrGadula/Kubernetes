@@ -94,3 +94,12 @@ Events:
   Normal  ScalingReplicaSet  6s    deployment-controller  Scaled down replica set deployment-5b85bc8649 to 1 from 2
   Normal  ScalingReplicaSet  6s    deployment-controller  Scaled up replica set deployment-5bdb75bc44 to 3 from 2
   Normal  ScalingReplicaSet  3s    deployment-controller  Scaled down replica set deployment-5b85bc8649 to 0 from 1
+
+
+# Check rollout history
+
+PS C:\PATH\Deployment> kubectl rollout history deployment/deployment
+deployment.apps/deployment 
+REVISION  CHANGE-CAUSE
+3         <none>
+4         <none>
