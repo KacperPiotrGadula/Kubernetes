@@ -103,3 +103,8 @@ deployment.apps/deployment
 REVISION  CHANGE-CAUSE
 3         <none>
 4         <none>
+
+# Rollout deployment to before version
+
+PS C:\PATH\Deployment> kubectl rollout undo deployment/deployment
+deployment.apps/deployment rolled back
