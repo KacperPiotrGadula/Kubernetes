@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment
+spec:
+  selector:
+    matchLabels:
+      name: deployment-k8s
+  replicas: 3
+  strategy:
+    type: RollingUpdate # update strategy (default - when we don't set up strategy, default value is RollingUpdate)
+  template:
+    metadata:
+      labels:
+        name: deployment-k8s
+    spec:
+      containers:
+      - name: deployment-k8s-containers
+        image: k8smaestro/web-app:2.0
