@@ -1,13 +1,26 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: k8s-namespace
+  name: dev
+---
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: compute-quota
+  namespace: dev
+spec:
+  hard:
+    pods: "10" # maximum pods in namespace
+    requests.cpu: "0.5" # Total CPU requested across all Pods cannot exceed 0.5 CPU
+    requests.memory: 1Gi # Total memory requested across all Pods cannot exceed 1 GiB
+    limits.cpu: "1" # Total CPU limit across all Pods cannot exceed 1 CPU
+    limits.memory: 2Gi # Total memory limit across all Pods cannot exceed 1 GiB
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: webapp-k8s
-  namespace: k8s-namespace
+  namespace: dev
 spec:
   selector:
     matchLabels:

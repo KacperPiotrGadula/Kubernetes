@@ -177,6 +177,9 @@ PS C:\PATH\Namespaces> kubectl delete -f .\namespace.yml
 namespace "k8s-namespace" deleted
 deployment.apps "webapp-k8s" deleted
 
-# Zmiana defaultowego namespace
+# Change defaultowego namespace
 
 kubectl config set-contest -- current --namespace=<new_name_space>
+
+# Set up limit hardware per namespace
+
