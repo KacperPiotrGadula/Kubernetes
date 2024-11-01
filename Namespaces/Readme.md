@@ -170,3 +170,9 @@ webapp-k8s-f9cb4cc9f-mfv8z   1/1     Running   0          9m58s
 webapp-k8s-f9cb4cc9f-v7b7q   1/1     Running   0          9m58s
 PS C:PATH\Namespaces> kubectl get pod
 No resources found in default namespace.
+
+# Multi object deleting
+
+PS C:\PATH\Namespaces> kubectl delete -f .\namespace.yml
+namespace "k8s-namespace" deleted
+deployment.apps "webapp-k8s" deleted
