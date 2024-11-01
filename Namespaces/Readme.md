@@ -146,3 +146,27 @@ csinodes                                                storage.k8s.io/v1       
 storageclasses                      sc                  storage.k8s.io/v1                 false        StorageClass
 volumeattachments                                       storage.k8s.io/v1                 false        VolumeAttachment
 audits                                                  warden.gke.io/v1                  false        Audit
+
+# Testing namespace
+
+PS C:\PATH\Namespaces> kubectl get all -n k8s-namespace
+NAME                             READY   STATUS    RESTARTS   AGE
+pod/webapp-k8s-f9cb4cc9f-j9q4z   1/1     Running   0          60s
+pod/webapp-k8s-f9cb4cc9f-mfv8z   1/1     Running   0          60s
+pod/webapp-k8s-f9cb4cc9f-v7b7q   1/1     Running   0          60s
+
+NAME                         READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/webapp-k8s   3/3     3            3           61s
+
+NAME                                   DESIRED   CURRENT   READY   AGE
+replicaset.apps/webapp-k8s-f9cb4cc9f   3         3         3       61s
+
+# Status namespace default vs k8s
+
+PS C:\PATH\Namespaces> kubectl get pods -n k8s-namespace
+NAME                         READY   STATUS    RESTARTS   AGE
+webapp-k8s-f9cb4cc9f-j9q4z   1/1     Running   0          9m58s
+webapp-k8s-f9cb4cc9f-mfv8z   1/1     Running   0          9m58s
+webapp-k8s-f9cb4cc9f-v7b7q   1/1     Running   0          9m58s
+PS C:PATH\Namespaces> kubectl get pod
+No resources found in default namespace.
