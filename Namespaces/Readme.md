@@ -8,4 +8,7 @@ kubectl get namespace -> Showing list of namespaces in cluster
 
 -> kube-system -> this namespace has pod member which one responsible for action cluster
 
-kubectl get namespace -n <name_of_namespace> -> Showing member in namespace which you are choosing 
+kubectl get pods -n <name_of_namespace> -> Showing pods in namespace which you are choosing 
+
+
+kubectl get all -n <name_of_namespace> -> Showing members  in namespace which you are choosing 
