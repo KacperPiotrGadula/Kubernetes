@@ -181,5 +181,8 @@ deployment.apps "webapp-k8s" deleted
 
 kubectl config set-contest -- current --namespace=<new_name_space>
 
-# Set up limit hardware per namespace
+# Set up limit hardware per namespace dev
 
+PS C:\PATH\Namespaces> kubectl get resourcequota -n dev
+NAME            AGE   REQUEST                                                           LIMIT
+compute-quota   8s    pods: 4/10, requests.cpu: 400m/500m, requests.memory: 800Mi/1Gi   limits.cpu: 800m/1, limits.memory: 1800Mi/2Gi
