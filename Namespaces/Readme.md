@@ -13,7 +13,7 @@ kubectl get pods -n <name_of_namespace> -> Showing pods in namespace which you a
 
 kubectl get all -n <name_of_namespace> -> Showing members  in namespace which you are choosing 
 
-# Check recources which will add to default namespace
+# Check recources which will be add to default namespace
 
 PS C:\PATH\Kubernetes> kubectl api-resources --namespaced=true
 NAME                           SHORTNAMES         APIVERSION                       NAMESPACED   KIND
@@ -95,3 +95,54 @@ rolebindings                                      rbac.authorization.k8s.io/v1  
 roles                                             rbac.authorization.k8s.io/v1     true         Role
 volumesnapshots                vs                 snapshot.storage.k8s.io/v1       true         VolumeSnapshot
 csistoragecapacities                              storage.k8s.io/v1                true         CSIStorageCapacity
+
+
+# Check recources which won't be add to default namespace
+
+PS C:\PATH\Kubernetes> kubectl api-resources --namespaced=false
+NAME                                SHORTNAMES          APIVERSION                        NAMESPACED   KIND
+componentstatuses                   cs                  v1                                false        ComponentStatus
+namespaces                          ns                  v1                                false        Namespace
+nodes                               no                  v1                                false        Node
+persistentvolumes                   pv                  v1                                false        PersistentVolume
+mutatingwebhookconfigurations                           admissionregistration.k8s.io/v1   false        MutatingWebhookConfiguration
+validatingadmissionpolicies                             admissionregistration.k8s.io/v1   false        ValidatingAdmissionPolicy
+validatingadmissionpolicybindings                       admissionregistration.k8s.io/v1   false        ValidatingAdmissionPolicyBinding
+validatingwebhookconfigurations                         admissionregistration.k8s.io/v1   false        ValidatingWebhookConfiguration
+customresourcedefinitions           crd,crds            apiextensions.k8s.io/v1           false        CustomResourceDefinition
+apiservices                                             apiregistration.k8s.io/v1         false        APIService
+selfsubjectreviews                                      authentication.k8s.io/v1          false        SelfSubjectReview
+tokenreviews                                            authentication.k8s.io/v1          false        TokenReview
+selfsubjectaccessreviews                                authorization.k8s.io/v1           false        SelfSubjectAccessReview
+selfsubjectrulesreviews                                 authorization.k8s.io/v1           false        SelfSubjectRulesReview
+subjectaccessreviews                                    authorization.k8s.io/v1           false        SubjectAccessReview
+allowlistedv2workloads                                  auto.gke.io/v1                    false        AllowlistedV2Workload
+allowlistedworkloads                                    auto.gke.io/v1                    false        AllowlistedWorkload
+workloadallowlists                                      auto.gke.io/v1                    false        WorkloadAllowlist
+certificatesigningrequests          csr                 certificates.k8s.io/v1            false        CertificateSigningRequest
+computeclasses                      cc,ccs              cloud.google.com/v1               false        ComputeClass
+flowschemas                                             flowcontrol.apiserver.k8s.io/v1   false        FlowSchema
+prioritylevelconfigurations                             flowcontrol.apiserver.k8s.io/v1   false        PriorityLevelConfiguration
+memberships                                             hub.gke.io/v1                     false        Membership
+nodes                                                   metrics.k8s.io/v1beta1            false        NodeMetrics
+clusternodemonitorings                                  monitoring.googleapis.com/v1      false        ClusterNodeMonitoring
+clusterpodmonitorings                                   monitoring.googleapis.com/v1      false        ClusterPodMonitoring
+clusterrules                                            monitoring.googleapis.com/v1      false        ClusterRules
+globalrules                                             monitoring.googleapis.com/v1      false        GlobalRules
+gkenetworkparamsets                                     networking.gke.io/v1              false        GKENetworkParamSet
+networks                                                networking.gke.io/v1              false        Network
+servicefunctionchains                                   networking.gke.io/v1              false        ServiceFunctionChain
+trafficselectors                                        networking.gke.io/v1              false        TrafficSelector
+ingressclasses                                          networking.k8s.io/v1              false        IngressClass
+gcpresourceallowlists                                   node.gke.io/v1                    false        GCPResourceAllowlist
+runtimeclasses                                          node.k8s.io/v1                    false        RuntimeClass
+clusterrolebindings                                     rbac.authorization.k8s.io/v1      false        ClusterRoleBinding
+clusterroles                                            rbac.authorization.k8s.io/v1      false        ClusterRole
+priorityclasses                     pc                  scheduling.k8s.io/v1              false        PriorityClass
+volumesnapshotclasses               vsclass,vsclasses   snapshot.storage.k8s.io/v1        false        VolumeSnapshotClass
+volumesnapshotcontents              vsc,vscs            snapshot.storage.k8s.io/v1        false        VolumeSnapshotContent
+csidrivers                                              storage.k8s.io/v1                 false        CSIDriver
+csinodes                                                storage.k8s.io/v1                 false        CSINode
+storageclasses                      sc                  storage.k8s.io/v1                 false        StorageClass
+volumeattachments                                       storage.k8s.io/v1                 false        VolumeAttachment
+audits                                                  warden.gke.io/v1                  false        Audit
