@@ -7,3 +7,5 @@ In Kubernetes defaylt namespace has name "default". Any new object which we are 
 kubectl get namespace -> Showing list of namespaces in cluster
 
 -> kube-system -> this namespace has pod member which one responsible for action cluster
+
+kubectl get namespace -n <name_of_namespace> -> Showing member in namespace which you are choosing 
