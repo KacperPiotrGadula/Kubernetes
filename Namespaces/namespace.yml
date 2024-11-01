@@ -36,3 +36,10 @@ spec:
       containers:
       - name: webapp
         image: k8smaestro/web-app:2.0
+        resources:
+          requests:
+            cpu: 100m # Minimum CPU the container is guaranteed (100 millicores)
+            memory: 200Mi # Minimum memory the container is guaranteed (200 MiB)
+          limits:
+            cpu: 200m # Maximum CPU the container can use (200 millicores)
+            memory: 450Mi # Maximum memory the container can use (450 MiB)
