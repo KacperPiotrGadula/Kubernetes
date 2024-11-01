@@ -1,0 +1,45 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dev
+---
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: compute-quota
+  namespace: dev
+spec:
+  hard:
+    pods: "10" # maximum pods in namespace
+    requests.cpu: "0.5" # Total CPU requested across all Pods cannot exceed 0.5 CPU
+    requests.memory: 1Gi # Total memory requested across all Pods cannot exceed 1 GiB
+    limits.cpu: "1" # Total CPU limit across all Pods cannot exceed 1 CPU
+    limits.memory: 2Gi # Total memory limit across all Pods cannot exceed 1 GiB
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp-k8s
+  namespace: dev
+spec:
+  selector:
+    matchLabels:
+      name: k8s
+  replicas: 10
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        name: k8s
+    spec:
+      containers:
+      - name: webapp
+        image: k8smaestro/web-app:2.0
+        resources:
+          requests:
+            cpu: 100m # Minimum CPU the container is guaranteed (100 millicores)
+            memory: 200Mi # Minimum memory the container is guaranteed (200 MiB)
+          limits:
+            cpu: 200m # Maximum CPU the container can use (200 millicores)
+            memory: 450Mi # Maximum memory the container can use (450 MiB)
