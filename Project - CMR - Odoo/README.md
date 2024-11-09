@@ -43,3 +43,9 @@ deployment/odoo-app: The type of resource (in this case Deployment) and its name
 or 
 
 ``http://localhost:8080/web``
+
+5) When somethink not working
+
+- kubectl logs <name_pods> -n <namespace> → show all logs from pods
+- kubectl get ALL -n <namespace> → show all information about inplementation in namespace
+- check your yml → look on env section. You need full 100% confidence you have correct value
