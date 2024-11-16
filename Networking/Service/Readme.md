@@ -30,3 +30,11 @@ When enabling an application on a given port, we specify that the service will b
 - the nodeport-like application is made available on the specified port
 - the loadbalancer as a service receives an external ip address
 - when traffic arrives at the loadbalancer from outside, it forwards the traffic to the corresponding port where the application is running
+
+# External
+- Maps Service to DNS entry
+- Only IPv4 compliant DNS name is accepted (IP addresses are not supported)
+- Does not work on labels
+- It may work when migrating parts of the system to
+Kubernetes
+- E.g.: communication between Kubernetes and an external database data
