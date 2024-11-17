@@ -6,5 +6,6 @@ read and write
 reading
 - ReadWriteMany-can be mounted on several nodes, both to
 read and write
-- Important: a volume can only be mounted by one access type
+## Important: a volume can only be mounted by one access type
 once at the same time.
+## Not every volume driver supports all three types of access
