@@ -30,9 +30,9 @@ spec:
             - name: ODOO_DATABASE_PASSWORD
               value: "k8smaestro"
             - name: ODOO_EMAIL
-              value: "filip"
+              value: "kacper@cos.com"
             - name: ODOO_PASSWORD
-              value: "grucela"
+              value: "bombel"
           volumeMounts:
             - name: odoo-data
               mountPath: /bitnami/odoo
