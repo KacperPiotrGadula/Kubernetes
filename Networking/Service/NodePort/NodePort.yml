@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-app #Deployment name
+spec:
+  replicas: 3 #Count of replications
+  selector:
+    matchLabels:
+      name: app # Labels name for taking care of containers
+  template:
+    metadata:
+      labels:
+        name: app # This labels have to similar to matchLabels
+    spec:
+      containers:
+      - name: application # Container name
+        image: k8smaestro/web-app:1.0 # Containers image
+        ports:
+        - containerPort: 80 # Apps port in container
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: webapp-client-svc # Service name
+spec:
+  ports:
+    - port: 80 # Port availability from outside
+      targetPort: 80 # Port in container
+      protocol: TCP
+      nodePort: 30080
+  type: NodePort # Service type
+  selector:
+    name: app # Selector using to configuration containers

@@ -18,3 +18,9 @@ Ingress Controller
 things to do in Kubernetes
 5) Directing traffic to appropriate Services based on
 definitions in Ingress Resource
+
+# Ingress deployment
+
+[LINK](https://kubernetes.github.io/ingress-nginx/deploy/)
+
+[Support version](https://github.com/kubernetes/ingress-nginx#supported-versions-table)
