@@ -34,8 +34,9 @@ spec:
             - name: ODOO_PASSWORD
               value: "bombel"
           volumeMounts:
-            - name: odoo-data
+            - name: tasksvol
               mountPath: /bitnami/odoo
       volumes:
-        - name: odoo-data
-          emptyDir: {}
+        - name: tasksvol
+          persistentVolumeClaim:
+            claimName: tasks-pvc
