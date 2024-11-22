@@ -32,3 +32,8 @@ number of containers
 
 4) Microservices (yes, microservices are also one of the
 cloud native foundations, but not the only one)
+
+5) Backend services (databases, caches, queues, monitoring,
+analytics)
+
+6) Automation, classic CD / CD and GitOps approach
