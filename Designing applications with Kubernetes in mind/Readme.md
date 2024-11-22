@@ -19,3 +19,16 @@ Application developed for:
 2) On-premise
 3) Privete cloud
 4) Hybrid cloud
+
+# Cloud Native is not just microservices
+
+1) Containers, thanks to which we can run applications in
+any infrastructure
+
+2) Patterns, such as the Twelve-Factor App
+
+3) Container orchestration, which is necessary with a large
+number of containers
+
+4) Microservices (yes, microservices are also one of the
+cloud native foundations, but not the only one)
