@@ -37,3 +37,12 @@ cloud native foundations, but not the only one)
 analytics)
 
 6) Automation, classic CD / CD and GitOps approach
+
+
+# Stateful vs. stateless applications
+
+Sessions        |       No ssession
+Login           |       No login
+Basket          |       No Basket
+Dynamic Content |       Static Content
+
