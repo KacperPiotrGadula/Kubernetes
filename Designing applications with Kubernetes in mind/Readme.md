@@ -9,3 +9,13 @@ Technologies around Kubernetes E.g.
 5) ContainerD
 6) Argo
 7) CRI-O
+
+
+# Cloud Native Aplication
+
+Application developed for: 
+
+1) Cloud
+2) On-premise
+3) Privete cloud
+4) Hybrid cloud
