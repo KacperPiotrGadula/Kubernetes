@@ -36,3 +36,10 @@ users
     -> Regardless of whether the application was designed under Kubernetes
 
 # Important: both liveness and we define readiness for containers
+
+# Implementation application
+
+1) kubectl apply -f liveness-readiness.yml
+2) kubectl proxy
+3) http://localhost:8001/api/v1/namespaces/default/services/http:service-web-api-liveness-readiness:/proxy/health
+4) Status -> healthy
