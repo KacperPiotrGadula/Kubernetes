@@ -46,3 +46,40 @@ Login           |       No login
 Basket          |       No Basket
 Dynamic Content |       Static Content
 
+# 12 Factor
+
+## I Codebase
+Single source code tracked by version control system, multiple implementations
+
+## II. Dependencies
+Explicitly declare and separate dependencies
+
+## III. Configuration
+Store configuration in the environment
+
+## IV. Support services
+Treat support services as allocated resources
+
+## V. Build, publish, run
+Separate the build and launch phases
+
+## VI. Processes
+Run the application as one or more stateless processes
+
+## VII. Port allocation
+Make services available by assigning ports
+
+## VIII. Concurrency
+Scale through appropriately sized processes
+
+## IX. Transferability
+Increase flexibility by allowing applications to start and stop quickly
+
+## X. Uniformity of environments
+Keep the configuration of environments as similar as possible
+
+## XI. Logs
+Treat logs as a stream of events
+
+## XII. Application management
+Run administrative tasks as one-off processes
