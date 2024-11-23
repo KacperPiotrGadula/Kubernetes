@@ -12,3 +12,4 @@ hardware
 3) If we do not, the container can consume:
 - all available resources
 - more resources than are available on a given node - at worst case may cause killing of system processes on the node
+4) We can specify limits for a given ``namespace``, then the container can use the maximum that is specified in the limit for the entire namespace
