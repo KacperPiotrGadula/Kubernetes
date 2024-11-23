@@ -34,3 +34,5 @@ users
 
 - To prevent this, when designing applications (most often) a special HTTP endpoint is created that can be cycled filed to: ``/health`` or ``/healthz``
     -> Regardless of whether the application was designed under Kubernetes
+
+# Important: both liveness and we define readiness for containers
