@@ -84,7 +84,7 @@ Treat logs as a stream of events
 ## XII. Application management
 Run administrative tasks as one-off processes
 
-# Importnat
+# Important things in kubernetes
 
 -> not every application is suitable to be hosted in a kubernetes environment
 
