@@ -24,3 +24,8 @@ All containers are working.
 
 ## Ready
 The app is working -> ready accept user traffic
+
+# Readiness Probe
+
+Make sure the app is ready to accept traffic
+users
