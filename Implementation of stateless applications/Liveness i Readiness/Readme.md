@@ -29,3 +29,8 @@ The app is working -> ready accept user traffic
 
 Make sure the app is ready to accept traffic
 users
+
+# Liveness Probe
+
+- To prevent this, when designing applications (most often) a special HTTP endpoint is created that can be cycled filed to: ``/health`` or ``/healthz``
+    -> Regardless of whether the application was designed under Kubernetes
