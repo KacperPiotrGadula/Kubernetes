@@ -10,3 +10,17 @@ nodes, container (s) are running
 ## Running
 At least one of the containers is still working.,
 or its main process starts/restarts
+
+# Pod conditions
+
+## PodScheduled
+Under assigned to noda
+
+## Initialized
+InitContainers have been launched
+
+## ContainersReady
+All containers are working.
+
+## Ready
+The app is working -> ready accept user traffic
