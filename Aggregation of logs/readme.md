@@ -15,3 +15,8 @@ kubecetl cluster-info
 
 ``./elasticsearch-create-enrollment-token --scope kibana``
 
+4. Verification code for kibana
+
+``kubectl logs kibana-bc95d97fb-9588l``
+
+Your verification code is:  173 645
