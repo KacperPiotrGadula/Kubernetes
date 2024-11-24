@@ -16,3 +16,9 @@ kubectl get ingress -n odoo
 NAME               CLASS   HOSTS   ADDRESS        PORTS   AGE
 ingress-resource   nginx   *       34.118.8.207   80      14m
 ```
+
+# Check Rollout Update
+```
+kubectl rollout history deployment/odoo-app -n odoo
+kubectl rollout history deployment/odoo-app -n odoo --revision=1/2
+```

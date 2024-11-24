@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: odoo
-          image: docker.io/bitnami/odoo:16
+          image: docker.io/bitnami/odoo:15
           ports:
             - containerPort: 8069
           env:
@@ -40,11 +40,11 @@ spec:
               value: "bombel"
           resources:
             requests:
-              cpu: 100m
-              memory: 220Mi
+              memory: "512Mi"
+              cpu: "500m"
             limits:
-              cpu: 200m
-              memory: 450Mi
+              memory: "1Gi"
+              cpu: "1000m"
           volumeMounts:
             - name: tasksvol
               mountPath: /bitnami/odoo
