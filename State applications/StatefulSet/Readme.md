@@ -8,4 +8,8 @@ creation, as well as                   during the first creation, as well as
 scaling/modifying                      scaling/modifying
 3. One PersistentVolumeClaim for    3. Each replica has its own,
 all replicas                           dedicated PersistentVolumeClaim
+4. If any sub is deleted,           4. If any sub is deleted
+a pod with a different name            in its place will be added a sub
+will be added in its place             with exactly the same name
+
 ```
