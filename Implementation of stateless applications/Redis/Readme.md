@@ -13,6 +13,8 @@
 ``kubectl get pv`` -> View Persistent volume
 ``kubectl get sts`` -> View StatefulSet
 ``kubectl get st`` -> View StorageClass
+``kubectl delete pvc --all`` -> Delete all pvc from kubernetes
+``kubectl delete -f .\<folder_name>\`` -> Delete full yml configuration in kubernetes visibility in .\folder\
 
 # Redis command
 
