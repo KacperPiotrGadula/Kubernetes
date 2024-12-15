@@ -1,0 +1,58 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-enhanced
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      deployment: pods-nginx-enhanced
+  template:
+    metadata:
+      name: pod-nginx-enhanced
+      labels:
+        deployment: pods-nginx-enhanced
+      annotations: # AppArmor -> container.apparmor.security.beta.kubernetes.io/<container name>
+        container.apparmor.security.beta.kubernetes.io/nginx-enhanced-ctr: runtime/default
+    spec:
+      securityContext:
+        runAsUser: 10000
+        runAsNonRoot: true
+        runAsGroup: 10001
+        fsGroup: 10001 # changing ownership of a volume mounted to a pod
+      containers:
+      - name: nginx-enhanced-ctr
+        image : k8smaestro/nginx-unprivileged:1.20.0
+        imagePullPolicy: Always
+        securityContext:
+          capabilities: #Turn off all capabilities in inside container
+            drop:
+              - all
+          # readOnlyRootFilesystem: true # nginx create temp file than when access to alow only to read.. nginx finish worki with error
+          seccompProfile:
+            type: RuntimeDefault
+          allowPrivilegeEscalation: false
+          privileged: false
+        ports:
+        - name: http
+          containerPort: 8080
+        resources:
+          requests:
+            memory: "100Mi"
+            cpu: "200m"
+          limits:
+            memory: "300Mi"
+            cpu: "500m"
+        readinessProbe:
+          httpGet:
+            scheme: HTTP
+            path: /index.html
+            port: http
+          initialDelaySeconds: 10
+          periodSeconds: 3
+        livenessProbe:
+          httpGet:
+            path: /index.html
+            port: http
+          failureThreshold: 1
+          periodSeconds: 10
