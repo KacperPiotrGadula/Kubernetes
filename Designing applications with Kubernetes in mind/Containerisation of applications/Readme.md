@@ -14,5 +14,5 @@ docker push kacpergadula/projectapp-frontend:1.0
 ```
 kubectl apply -f .\backend.yml
 kubectl apply -f .\frontend-configmap.yml
-kubectl apply -f .\frontend.yml
+kubectl apply -f .\
 ```
