@@ -50,10 +50,11 @@ Members of the Helm community contributed to the compilation of the Helm package
 ``helm install my-elasticsearch elastic/elasticsearch --version 8.5.1``
 
 ### Check status after intalation procedur
-
-1. Watch all cluster members come up.
-  $ kubectl get pods --namespace=default -l app=elasticsearch-master -w
-2. Retrieve elastic user's password.
-  $ kubectl get secrets --namespace=default elasticsearch-master-credentials -ojsonpath='{.data.password}' | base64 -d
-3. Test cluster health using Helm test.
-  $ helm --namespace=default test my-elasticsearch
+1. Check status for all cluster
+  kubectl get all
+2. Watch all cluster members come up.
+  kubectl get pods --namespace=default -l app=elasticsearch-master -w
+3. Retrieve elastic user's password.
+  kubectl get secrets --namespace=default elasticsearch-master-credentials -ojsonpath='{.data.password}' | base64 -d
+4. Test cluster health using Helm test.
+  helm --namespace=default test my-elasticsearch
