@@ -66,5 +66,6 @@ Members of the Helm community contributed to the compilation of the Helm package
 ``helm delete`` -> Removal of deployed configuration
 ``helm show`` -> Allows you to show the contents of any default configuration file for a given prepared helm chart
 ``helm get manifest <name of helm chart implementation>`` -> Displaying information on what, based on the helm chart, has been deployed on the infrastructure
-
 ``helm create custom-helm-chart creating custom-helm-chart`` -> Initiate the configuration of your own helm chart
+``helm history <project_chart_name>`` -> show history release of <project_chart_name>
+``helm rollback <project_chart_name> <REVISION_number>`` -> rollback to seted REVISION_number
