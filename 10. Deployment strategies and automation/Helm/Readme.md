@@ -35,3 +35,17 @@ Members of the Helm community contributed to the compilation of the Helm package
 ## Helm Hub
 
 [Link](https://artifacthub.io/)
+
+## Instalation procedur for Elastic
+
+Add repository
+
+`helm repo add elastic https://helm.elastic.co`
+
+!! Importnat !!
+- only one sc should be stay on default status (kubectl get sc)
+
+
+Install chart
+
+`helm install my-elasticsearch elastic/elasticsearch --version 8.5.1`
