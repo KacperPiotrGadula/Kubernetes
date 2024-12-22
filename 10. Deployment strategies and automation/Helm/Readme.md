@@ -31,3 +31,7 @@
 Members of the Helm community contributed to the compilation of the Helm package for Winget . This package is generally up to date.
 
 ``winget install Helm.Helm``
+
+## Helm Hub
+
+[Link](https://artifacthub.io/)
