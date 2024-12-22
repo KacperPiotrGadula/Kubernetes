@@ -21,3 +21,7 @@
 
 4) templetes
 - space for yml file with ours configuration
+
+## Documentation
+
+[Link](https://helm.sh/docs/intro/install/)
