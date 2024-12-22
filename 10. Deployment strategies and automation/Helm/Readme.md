@@ -58,3 +58,11 @@ Members of the Helm community contributed to the compilation of the Helm package
   kubectl get secrets --namespace=default elasticsearch-master-credentials -ojsonpath='{.data.password}' | base64 -d
 4. Test cluster health using Helm test.
   helm --namespace=default test my-elasticsearch
+
+## Helm Command
+
+``helm list`` -> Listing of all revisions that have been implemented
+``helm upgrade`` -> Update the deployed version on cluster
+``helm delete`` -> Removal of deployed configuration
+``helm show`` -> Allows you to show the contents of any default configuration file for a given prepared helm chart
+``helm get manifest <name of helm chart implementation>`` -> Displaying information on what, based on the helm chart, has been deployed on the infrastructure
