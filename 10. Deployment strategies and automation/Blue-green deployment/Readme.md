@@ -15,8 +15,9 @@ Rollback startegy
 
 ``kubectl apply -f ingress-v1.yml``
 
-Usuwanie calego skonfigurowanego strodowiska dla 
-kubectl delete all -l part-of=blue-green-demo
+Deleting the entire configured environment for blue-green-demo
+
+``kubectl delete all -l part-of=blue-green-demo``
 
 Delete ingress-nginx engine
 
